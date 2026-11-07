@@ -43,8 +43,8 @@ jobs:
           npm install @capacitor/assets --save-dev
           chmod -R 755 ./node_modules/.bin/
 
-          # توليد الأيقونات مباشرة بدون خيارات إضافية قد تسبب تعارض
-          ./node_modules/.bin/capacitor-assets generate --android --force
+          # إزالة خيار --force لأنه غير مدعوم
+          ./node_modules/.bin/capacitor-assets generate --android
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
